@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.springweb;
+package com.springweb.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +18,8 @@ public class HomeController {
     
     @RequestMapping("/")
     public String home(){
-        return "mahasiswa";
+        return "home";
     }
+    
+    
 }

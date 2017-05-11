@@ -48,11 +48,21 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     </nav>
 
     <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br/> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+        <h2>Data Mahasiswa</h2>
+        <div th:if="${not #lists.isEmpty(mahasiswa)}">
+            <table class="table table-striped">
+                <tr>
+                    <th>Nama</th>
+                    <th>Nim</th>
+                    <th>Jurusan</th>
+                </tr>
+                <tr th:each="mahasiswas : ${mahasiswa}">
+                    <td th:text="${mahasiswas.nama}"></td>
+                    <td th:text="${mahasiswas.nim}"></td>
+                    <td th:text="${mahasiswas.jurusan}"></td>
+                </tr>     
+            </table>
+        </div>
 
     </div><!-- /.container -->
 
