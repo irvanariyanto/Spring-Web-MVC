@@ -43,6 +43,13 @@ public class MahasiswaDao implements MahasiswaService{
         em.getTransaction().commit();
         return saved;
     }
+
+    @Override
+    public Mahasiswa getIdMahasiswa(Integer id) {
+        EntityManager em=emf.createEntityManager();
+        return em.find(Mahasiswa.class, id);
+    }
+    
     
     
     

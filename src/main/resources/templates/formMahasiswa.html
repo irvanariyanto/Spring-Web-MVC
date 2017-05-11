@@ -53,6 +53,8 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
             <div class="col-sm-8">
                 <form class="form-horizontal" th:object="${mahasiswa}" th:action="@{/mahasiswa/create}" method="post">
                     <input type="hidden" th:field="*{id}"/>
+                    <input type="hidden" th:field="*{version}"/>
+                    
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Nama :</label>
                             <div class="col-sm-10">

@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 
 
@@ -31,6 +32,10 @@ public class Mahasiswa {
     
     private String jurusan;
     private String nim;
+    
+    @Version
+    @Column(name = "optVersion", columnDefinition = "Integer DEFAULT 0")
+    private Integer version;
 
     public Integer getId() {
         return id;
@@ -62,6 +67,14 @@ public class Mahasiswa {
 
     public void setNim(String nim) {
         this.nim = nim;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
     
     
