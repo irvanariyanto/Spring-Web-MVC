@@ -53,5 +53,9 @@ public class MahasiswaController {
         return "formMahasiswa";
     }
     
- 
+    @RequestMapping(value = "/mahasiswa/hapus/{id}")
+    public String hapusData(@PathVariable Integer id){
+        mahasiswaService.hapus(id);
+        return "redirect:/mahasiswa";
+    }
 }

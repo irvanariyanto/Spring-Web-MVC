@@ -19,4 +19,6 @@ public interface MahasiswaService {
     Mahasiswa saveOrUpdate(Mahasiswa mahasiswa);
     
     Mahasiswa getIdMahasiswa(Integer id);
+    
+    void hapus(Integer id);
 }
